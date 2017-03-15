@@ -107,4 +107,4 @@ webpack.prod.conf.js：
 ```
 
 至此，多页面应用已经搭建完毕，只需要在pages文件夹创建相应的页面文件下即可。
-后续会继续跟大家分享[postcss插件和css预编译的设置](https://github.com/tonyfree/blog/blob/master/%E5%9F%BA%E4%BA%8Evue-cli%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%A4%9A%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8(%E4%BA%8C)--postcss%E6%8F%92%E4%BB%B6%E5%92%8Ccss%E9%A2%84%E7%BC%96%E8%AF%91%E9%85%8D%E7%BD%AE.md)、[rap接口在开发和打包的自动切换]()、[自动化部署]()、[移动端适配]()、[UI库的选择和使用]()
+后续会继续跟大家分享<a href="基于vue-cli搭建一个多页面应用(二)--postcss插件和css预编译配置.md" target="_blank">postcss插件和css预编译的设置</a>、<a href="基于vue-cli搭建一个多页面应用(三)--路径、模块别名和模块自动加载配置.md" target="_blank">路径、模块别名和模块自动加载配置</a>、[rap接口在开发和打包的自动切换]()、[自动化部署]()、[移动端适配]()、[UI库的选择和使用]()
