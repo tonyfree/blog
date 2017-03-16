@@ -144,9 +144,7 @@ manifest模块是对vendor模块做的缓存
 ```
 chunksSortMode: 'dependency'
 ```
-如果没有chunks这个配置，则插件会按照模块的依赖关系依次加载，即：manifest，vendor，本页面入口，其他页面入口...  
-所以chunks配置的顺序为：['manifest', 'vendor', filename]
-
+插件会按照模块的依赖关系依次加载，即：manifest，vendor，本页面入口，其他页面入口...    
 
 至此，多页面应用已经搭建完毕，只需要在pages文件夹创建相应的页面文件即可。
 后续会继续跟大家分享<a href="基于vue-cli搭建一个多页面应用(二)--postcss插件和css预编译配置.md" target="_blank">postcss插件和css预编译的设置</a>、<a href="基于vue-cli搭建一个多页面应用(三)--路径、模块别名和模块自动加载配置.md" target="_blank">路径、模块别名和模块自动加载配置</a>、[rap接口在开发和打包的自动切换]()、[自动化部署]()、[移动端适配]()、[UI库的选择和使用]()

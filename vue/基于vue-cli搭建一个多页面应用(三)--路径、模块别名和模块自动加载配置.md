@@ -47,6 +47,8 @@ Vue.use(Router)
 可不可以自动化加载，不需要每次都手动引用呢？webpack自带的[ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/)插件配置解决了这个问题。
 在build/webpack.base.conf.js中添加如下配置：
 ```
+var webpack = require('webpack')
+
 module.exports = {
   entry: utils.entries(),
   output: {...},
