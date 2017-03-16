@@ -49,6 +49,7 @@ exports.htmlPlugin = function() {
     let conf = {
       template: filePath,
       filename: filename + '.html',
+      chunks: ['manifest', 'vendor', filename],
       inject: true
     }
     if (process.env.NODE_ENV === 'production') {
