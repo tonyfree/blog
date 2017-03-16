@@ -107,5 +107,46 @@ webpack.prod.conf.js：
   ].concat(utils.htmlPlugin())
 ```
 
-至此，多页面应用已经搭建完毕，只需要在pages文件夹创建相应的页面文件下即可。
+
+补充说明：在上面多页面输出配置中有这样一行代码：
+```
+  chunks: ['manifest', 'vendor', filename],
+```
+这是[html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)插件对页面入口文件(即js文件)的限定，如果不设置则会把整个项目下的所有入口文件全部引入  
+为什么要引入'manifest'和'vendor'，在build/webpack.prod.conf.js中有如下代码：
+```
+    // split vendor js into its own file
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: function (module, count) {
+        // any required modules inside node_modules are extracted to vendor
+        return (
+          module.resource &&
+          /\.js$/.test(module.resource) &&
+          module.resource.indexOf(
+            path.join(__dirname, '../node_modules')
+          ) === 0
+        )
+      }
+    }),
+    // extract webpack runtime and module manifest to its own file in order to
+    // prevent vendor hash from being updated whenever app bundle is updated
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest',
+      chunks: ['vendor']
+    }),
+```
+vendor模块是指提取涉及node_modules中的公共模块  
+manifest模块是对vendor模块做的缓存  
+关于CommonsChunkPlugin插件的详细说明请阅读[官方文档](https://webpack.js.org/plugins/commons-chunk-plugin/)
+
+关于html-webpack-plugin插件的配置还有一行代码：
+```
+chunksSortMode: 'dependency'
+```
+如果没有chunks这个配置，则插件会按照模块的依赖关系依次加载，即：manifest，vendor，本页面入口，其他页面入口...  
+所以chunks配置的顺序为：['manifest', 'vendor', filename]
+
+
+至此，多页面应用已经搭建完毕，只需要在pages文件夹创建相应的页面文件即可。
 后续会继续跟大家分享<a href="基于vue-cli搭建一个多页面应用(二)--postcss插件和css预编译配置.md" target="_blank">postcss插件和css预编译的设置</a>、<a href="基于vue-cli搭建一个多页面应用(三)--路径、模块别名和模块自动加载配置.md" target="_blank">路径、模块别名和模块自动加载配置</a>、[rap接口在开发和打包的自动切换]()、[自动化部署]()、[移动端适配]()、[UI库的选择和使用]()
