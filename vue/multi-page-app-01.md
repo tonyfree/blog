@@ -1,3 +1,5 @@
+## 基于vue-cli搭建一个多页面应用(一)--基础结构搭建.md
+
 1.全局安装[vue-cli](https://github.com/vuejs/vue-cli)：Vue.js官方提供的用于快速创建项目模板的脚手架工具
 ```
 $ npm install -g vue-cli
@@ -11,13 +13,13 @@ $ vue init webpack project-name
 3.在安装过程中会有一些提示：  
 1)Vue build这个选项选择Runtime + Compiler  
 2)安装vue-router，ESLint、Karma+Mocha、Nightwatch根据需求选择安装
-![](02.png)
-![](01.png)
+![](imgs/02.png)
+![](imgs/01.png)
 3)根据提示操作，即可成功启动项目
 
 4.现在创建的项目模板是单页面应用，与多页面应用还有些差别，需要做一些调整：   
 1)项目目录结构的调整：  
-![](03.png)  
+![](imgs/03.png)  
 在开发路径src下增加modules和pages文件夹，分别存放模块和页面   
 有关页面的所有文件都放到同一文件夹下就近管理：index.html(页面模板)、main.js(页面入口文件)、App.vue(页面使用的组件，公用组件放到components文件夹下)、router(页面的路由配置)、assets(页面的静态资源)都移到index文件夹下，并把main.js改为index.js,保证页面的入口js文件和模板文件的名称一致  
 

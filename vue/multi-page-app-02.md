@@ -1,5 +1,7 @@
+## 基于vue-cli搭建一个多页面应用(二)--postcss插件和css预编译配置
+
 ##### 这里以原项目模板的postcss插件autoprefixer为例说明：  
-![](06.png)
+![](imgs/06.png)
 
 1.为了便于测试，对首页做一些调整：  
 增加index.css
@@ -42,8 +44,8 @@ h1 {
 ```
 
 3.分别启动项目查看样式对比和打包后样式对比：  
-![](04.png)
-![](05.png)  
+![](imgs/04.png)
+![](imgs/05.png)  
 可以看出原模板的postcss插件只对组件起作用，不对页面起作用
 
 4.安装postcss-loader并修改build/utils.js的配置
