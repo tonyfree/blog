@@ -108,7 +108,7 @@ export {
 
 ```
 
-5.在页面或者组件中使用：
+5.fetch和rap方法在页面或者组件中使用：
 ```
 import { rap, fetch } from 'js/fetch.js'
 
