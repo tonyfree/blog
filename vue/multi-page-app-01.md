@@ -149,6 +149,7 @@ chunksSortMode: 'dependency'
 插件会按照模块的依赖关系依次加载，即：manifest，vendor，本页面入口，其他页面入口...    
 
 至此，多页面应用已经搭建完毕，只需要在pages文件夹创建相应的页面文件即可。
+
 后续会继续跟大家分享:
 
 + <a href="multi-page-app-02.md" target="_blank">postcss插件和css预编译配置</a>
@@ -156,4 +157,5 @@ chunksSortMode: 'dependency'
 + <a href="" target="_blank">rap自动切换和自动化部署</a>
 + <a href="" target="_blank">移动端适配方案</a>
 + <a href="" target="_blank">UI库的选择和使用</a>
+
 
