@@ -25,12 +25,12 @@ import Hello from '@/components/Hello'
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      'components': resolve('src/components'),
-      'pages': resolve('src/pages'),
-      'js': resolve('src/modules/js'),
-      'css': resolve('src/modules/css'),
-      'sass': resolve('src/modules/sass'),
-      'imgs': resolve('src/modules/imgs')
+      'components': '@/components',
+      'pages': '@/pages',
+      'js': '@/modules/js',
+      'css': '@/modules/css',
+      'sass': '@/modules/sass',
+      'imgs': '@/modules/imgs'
     }
 ```
 
@@ -94,3 +94,11 @@ Vue.use(Router)
 最后，关于node对ES2015的支持情况，可查看[node.green](http://node.green/#ES2015),其中不包含对import/export模块的支持
 
 最后的最后，曾尝试用ES2015的语法写webpack配置文件，但是并没有找好较好的实践方案，如果你有好的实践方案请推荐一下，谢谢！
+
+> 本系列文章：
+
++ <a href="multi-page-app-01.md" target="_blank">基础结构的搭建</a>
++ <a href="multi-page-app-02.md" target="_blank">postcss插件和css预编译配置</a>
++ <a href="" target="_blank">rap自动切换和自动化部署</a>
++ <a href="" target="_blank">移动端适配</a>
++ <a href="" target="_blank">UI库的选择和使用</a>

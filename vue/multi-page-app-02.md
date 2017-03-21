@@ -87,3 +87,21 @@ $ npm install sass-loader node-sass -D
 ```
 
 7.涉及到vue组件的设置，请参考文档：[vue-loader](http://vue-loader.vuejs.org/en/)，[中文文档]()正在翻译中，敬请期待
+
+2017.03.21补充：感谢[Wall](https://github.com/WangQiangrong)的提醒  
+上面关于style的lang属性，如果使用sass语法，也可以lang="sass"  
+在官方文档帮助手册里面说明了这个问题：
+```
+lang="scss" corresponds to the CSS-superset syntax (with curly braces and semicolones).
+lang="sass" corresponds to the indentation-based syntax
+```
+关于sass和scss格式的区别，可参考[官方文档](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax)
+
+
+> 本系列文章：
+
++ <a href="multi-page-app-01.md" target="_blank">基础结构的搭建</a>
++ <a href="multi-page-app-03.md" target="_blank">路径别名和模块自动加载配置</a>
++ <a href="" target="_blank">rap自动切换和自动化部署</a>
++ <a href="" target="_blank">移动端适配</a>
++ <a href="" target="_blank">UI库的选择和使用</a>
