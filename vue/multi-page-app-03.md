@@ -99,6 +99,7 @@ Vue.use(Router)
 
 + <a href="multi-page-app-01.md" target="_blank">基础结构的搭建</a>
 + <a href="multi-page-app-02.md" target="_blank">postcss插件和css预编译配置</a>
-+ <a href="" target="_blank">rap自动切换和自动化部署</a>
++ <a href="multi-page-app-04.md" target="_blank">rap自动切换配置</a>
++ <a href="multi-page-app-05.md" target="_blank">自动化部署</a>
 + <a href="" target="_blank">移动端适配</a>
 + <a href="" target="_blank">UI库的选择和使用</a>

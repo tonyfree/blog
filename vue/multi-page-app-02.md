@@ -102,6 +102,7 @@ lang="sass" corresponds to the indentation-based syntax
 
 + <a href="multi-page-app-01.md" target="_blank">基础结构的搭建</a>
 + <a href="multi-page-app-03.md" target="_blank">路径别名和模块自动加载配置</a>
-+ <a href="" target="_blank">rap自动切换和自动化部署</a>
++ <a href="multi-page-app-04.md" target="_blank">rap自动切换配置</a>
++ <a href="multi-page-app-05.md" target="_blank">自动化部署</a>
 + <a href="" target="_blank">移动端适配</a>
 + <a href="" target="_blank">UI库的选择和使用</a>

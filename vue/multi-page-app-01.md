@@ -154,7 +154,8 @@ chunksSortMode: 'dependency'
 
 + <a href="multi-page-app-02.md" target="_blank">postcss插件和css预编译配置</a>
 + <a href="multi-page-app-03.md" target="_blank">路径别名和模块自动加载配置</a>
-+ <a href="" target="_blank">rap自动切换和自动化部署</a>
++ <a href="multi-page-app-04.md" target="_blank">rap自动切换配置</a>
++ <a href="multi-page-app-05.md" target="_blank">自动化部署</a>
 + <a href="" target="_blank">移动端适配方案</a>
 + <a href="" target="_blank">UI库的选择和使用</a>
 
