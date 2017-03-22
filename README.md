@@ -2,8 +2,8 @@
 
 
 #### 基于vue-cli搭建一个多页面应用
-1. <a href="vue/multi-page-app-01.md" target="_blank">基础结构的搭建</a>
-2. <a href="vue/multi-page-app-02.md" target="_blank">postcss插件和css预编译配置</a>
-3. <a href="vue/multi-page-app-03.md" target="_blank">路径别名和模块自动加载配置</a>
-4. <a href="vue/multi-page-app-04.md" target="_blank">rap自动切换配置</a>
-5. <a href="vue/multi-page-app-05.md" target="_blank">自动化部署</a>
+1. <a href="https://github.com/tonyfree/blog/issues/1" target="_blank">基础结构的搭建</a>
+2. <a href="https://github.com/tonyfree/blog/issues/2" target="_blank">postcss插件和css预编译配置</a>
+3. <a href="https://github.com/tonyfree/blog/issues/3" target="_blank">路径别名和模块自动加载配置</a>
+4. <a href="https://github.com/tonyfree/blog/issues/4" target="_blank">rap自动切换配置</a>
+5. <a href="https://github.com/tonyfree/blog/issues/5" target="_blank">自动化部署</a>
