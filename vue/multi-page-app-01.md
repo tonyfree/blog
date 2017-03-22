@@ -1,4 +1,4 @@
-## 基于vue-cli搭建一个多页面应用(一)--基础结构搭建.md
+## 基于vue-cli搭建一个多页面应用(一)--基础结构搭建
 
 1.全局安装[vue-cli](https://github.com/vuejs/vue-cli)：Vue.js官方提供的用于快速创建项目模板的脚手架工具
 ```
