@@ -7,3 +7,5 @@
 3. <a href="https://github.com/tonyfree/blog/issues/3" target="_blank">路径别名和模块自动加载配置</a>
 4. <a href="https://github.com/tonyfree/blog/issues/4" target="_blank">rap自动切换配置</a>
 5. <a href="https://github.com/tonyfree/blog/issues/5" target="_blank">自动化部署</a>
+6. <a href="https://github.com/tonyfree/blog/issues/6" target="_blank">移动端适配方案</a>
+7. <a href="https://github.com/tonyfree/blog/issues/7" target="_blank">UI库的选择</a>
