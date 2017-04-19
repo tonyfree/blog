@@ -15,6 +15,32 @@ vConsole的 [演示地址](http://wechatfe.github.io/vconsole/demo.html)
 手机预览  
 ![](imgs/qrcode.png)
 
+调试只在测试环境使用，正式发布环境要把调试控制台去掉：  
+创建build/build-publish.js和build/build-test.js:
+```
+ let fileTxt = `let publish = true
+export default publish`
+
+  require('fs').writeFile(require('path').join(__dirname, '../src/modules/js/vconsoleConfig.js'), fileTxt)
+```
+src/modules/js/common.js:
+```
+// 开发环境调试面板，上线时屏蔽
+import publish from './vconsoleConfig.js'
+if (!publish) {
+  require('vconsole')
+}
+```
+
+script命令调整如下：
+```
+  "scripts": {
+    "dev": "node build/dev-server.js",
+    "build-publish": "node build/build-publish.js && node build/build.js && node build/zip.js",
+    "build": "node build/build-test.js && node build/build.js && gulp upload",
+    "upload": "gulp upload"
+  },
+```
 
 #### 异常监控
 采用 [sentry](https://sentry.io) 系统平台，需要创建Team和Project

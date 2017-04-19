@@ -56,6 +56,31 @@ $ npm run build
 ```
 ![](imgs/gulp-sftp.png)
 
+6.上面上传到服务器一般都是内部测试，如果需要发布到正式环境要把dist文件夹发给运维人员，使用[node-archiver](https://github.com/archiverjs/node-archiver)插件把dist文件夹压缩成zip文件  
+build/zip.js
+```
+var fs = require('fs')
+var archiver = require('archiver')
+var output = fs.createWriteStream(require('path').join(__dirname,'../') + '/haotaitai.zip')
+var archive = archiver('zip', {
+    zlib: { level: 9 } // Sets the compression level.
+})
+
+archive.pipe(output)
+
+archive.directory(require('path').join(__dirname,'../dist/'))
+
+archive.finalize()
+```
+
+7.修改script命令：
+```
+  "scripts": {
+    ......
+    "build-publish": "node build/build.js && node build/zip.js"
+  },
+```
+
 > 本系列文章：
 
 + <a href="multi-page-app-01.md" target="_blank">基础结构的搭建</a>
