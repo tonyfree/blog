@@ -1,5 +1,7 @@
 ## 自动化部署
 
+### 本地部署
+
 打包测试或者上线发布，都需要把打包好的代码上传到服务器，重复手动的事情都可以通过代码来解决。
 
 本文以gulp为例，根据不同的协议选用不同的插件：SFTP--[gulp-sftp](https://github.com/gtg092x/gulp-sftp)、FTP--[vinyl-ftp](https://github.com/morris/vinyl-ftp)，下面以SFTP协议来配置
@@ -80,6 +82,11 @@ archive.finalize()
     "build-publish": "node build/build.js && node build/zip.js"
   },
 ```
+
+8.静态资源托管和部署，可以使用第三方平台：[Surge](https://surge.sh/)、[Firebase](https://firebase.google.com/)、[Netlify](https://www.netlify.com/)
+
+
+### 服务器端部署
 
 > 本系列文章：
 
