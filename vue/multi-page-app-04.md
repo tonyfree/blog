@@ -29,7 +29,8 @@ module.exports = {
 }
 ```
 
-2.在build文件夹下创建rap-host.js文件
+2.在build文件夹下创建
+host.js:
 ```
 var rapHost = require('../project.config.js').rapHost
 
@@ -46,11 +47,31 @@ exports.hostConfig = function(isDev) {
 
 ```
 
+api-rap.js
+```
+let fileTxt = `
+module.exports = {
+  api: true
+}`
+
+require('fs').writeFile(require('path').join(__dirname, './api-conf.js'), fileTxt)
+```
+
+api-test.js
+```
+let fileTxt = `
+module.exports = {
+  api: false
+}`
+
+require('fs').writeFile(require('path').join(__dirname, './api-conf.js'), fileTxt)
+```
+
 3.分别在build/dev-server.js和build/build.js文件中调用hostConfig，在开发或者打包的时候就自动在src/modules/js/下生成或覆盖host-config.js(注意：要确保modules/js文件夹的存在)  
 build/dev-server.js
 ```
 require('./check-versions')()
-require('./host').hostConfig(true)
+require('./host').hostConfig(require('./api-conf.js').api)
 ```
 build/build.js
 ```
@@ -58,7 +79,19 @@ require('./check-versions')()
 require('./host').hostConfig(false)
 ```
 
-4.在modules文件夹下创建js文件夹，用于存放js模块  
+4.package.json配置
+```
+"scripts": {
+    //开发阶段使用rap接口
+    "dev": "node build/api-rap.js && node build/dev-server.js",
+    //联调阶段
+    "api": "node build/api-test.js && node build/dev-server.js",
+    //打包
+    "build": "node build/build.js",
+  },
+```
+
+5.在modules文件夹下创建js文件夹，用于存放js模块  
 创建fetch.js，用来封装获取异步数据的通用方法和RAP接口的url完整拼接，fetch方法可以根据后台数据结构的设计做相应调整
 ```
 let host = require('./host-config.js').host
@@ -108,7 +141,7 @@ export {
 
 ```
 
-5.fetch和rap方法在页面或者组件中使用：
+6.fetch和rap方法在页面或者组件中使用：
 ```
 import { rap, fetch } from 'js/fetch.js'
 
