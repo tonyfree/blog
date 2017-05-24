@@ -96,7 +96,7 @@ require('./host').hostConfig(false)
 ```
 let host = require('./host-config.js').host
 
-Vue.use(Resource)
+import axios from 'axios'
 
 function rap(urlList) {
   let obj = {}
@@ -108,15 +108,8 @@ function rap(urlList) {
 
 function fetch(url, data = undefined) {
   return new Promise((resolve, reject) => {
-    Vue.http({
-      url,
-      method: 'post',
-      params: data
-    }).then((res) => {
+    axios.post(url,data).then((res) => {
         let result = res.data
-        if (typeof(result) === "string") {
-          result = JSON.parse(result)
-        }
         if (result.status === 200) {
           resolve(result)
         } else if (result.status === 300) {
