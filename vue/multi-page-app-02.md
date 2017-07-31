@@ -66,7 +66,7 @@ $ npm install postcss-loader -D
   }
 ```
 
-PS：2017.07.30补充
+PS：2017.07.30补充  
 ================= start ==================  
 以上配置时postcss-loader的版本为1.3.3
 若postcss-loader的版本为2.0.0-2.0.2，以上配置会报错  
