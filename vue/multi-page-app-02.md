@@ -66,6 +66,38 @@ $ npm install postcss-loader -D
   }
 ```
 
+PS：2017.07.30补充
+================= start ==================
+以上配置时postcss-loader的版本为1.3.3
+若postcss-loader的版本为2.0.0-2.0.2，以上配置会报错  
+> Module build failed: TypeError: Cannot create property 'prev' on boolean 'false'
+at Promise.resolve.then.then  
+
+2.0.3及以上版本要报warning：  
+> Previous source map found, but options.sourceMap isn't set.
+In this case the loader will discard the source map enterily for performance reasons.
+See https://github.com/postcss/postcss-loader#sourcemap for more information  
+
+2.0.3及以上版本需重新配置：
+```
+  function generateLoaders (loader, loaderOptions) {
+    var loaders = [cssLoader]
+    var postcssLoader = {
+      loader:  'postcss-loader',
+      options: {
+        sourceMap: true
+      }
+    }
+    if (loader) {
+      ......
+      loaders.splice((loaders.length - 1), 0, postcssLoader)
+    }else {
+      loaders.push(postcssLoader)
+    }
+    ......
+  }
+```
+================= end ==================
 
 5.如果需要用到css的预编译，这里以sass为例，安装相应的插件即可：  
 ```

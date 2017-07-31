@@ -51,11 +51,12 @@ exports.htmlPlugin = function() {
     let conf = {
       template: filePath,
       filename: filename + '.html',
-      chunks: ['manifest', 'vendor', filename],
+      chunks: [filename],
       inject: true
     }
     if (process.env.NODE_ENV === 'production') {
       conf = merge(conf, {
+        chunks: ['manifest', 'vendor', filename],
         minify: {
           removeComments: true,
           collapseWhitespace: true,
