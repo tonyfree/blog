@@ -66,6 +66,41 @@ $ npm install postcss-loader -D
   }
 ```
 
+PS：2017.07.30补充
+
+================= start ==================
+
+以上配置时postcss-loader的版本为1.3.3  
+
+若postcss-loader的版本为2.0.0-2.0.2，以上配置会报错  
+> Module build failed: TypeError: Cannot create property 'prev' on boolean 'false'
+at Promise.resolve.then.then  
+
+2.0.3及以上版本要报warning：  
+> Previous source map found, but options.sourceMap isn't set.
+In this case the loader will discard the source map enterily for performance reasons.
+See https://github.com/postcss/postcss-loader#sourcemap for more information  
+
+2.0.3及以上版本需重新配置：
+```
+  function generateLoaders (loader, loaderOptions) {
+    var loaders = [cssLoader]
+    var postcssLoader = {
+      loader:  'postcss-loader',
+      options: {
+        sourceMap: true
+      }
+    }
+    if (loader) {
+      ......
+      loaders.splice((loaders.length - 1), 0, postcssLoader)
+    }else {
+      loaders.push(postcssLoader)
+    }
+    ......
+  }
+```
+================= end ==================
 
 5.如果需要用到css的预编译，这里以sass为例，安装相应的插件即可：  
 ```
@@ -100,9 +135,11 @@ lang="sass" corresponds to the indentation-based syntax
 
 > 本系列文章：
 
-+ <a href="multi-page-app-01.md" target="_blank">基础结构的搭建</a>
-+ <a href="multi-page-app-03.md" target="_blank">路径别名和模块自动加载配置</a>
-+ <a href="multi-page-app-04.md" target="_blank">rap自动切换配置</a>
-+ <a href="multi-page-app-05.md" target="_blank">自动化部署</a>
-+ <a href="" target="_blank">移动端适配</a>
-+ <a href="" target="_blank">UI库的选择和使用</a>
+1. <a href="https://github.com/tonyfree/blog/issues/1" target="_blank">基础结构的搭建</a>
+2. <a href="https://github.com/tonyfree/blog/issues/2" target="_blank">postcss插件和css预编译配置</a>
+3. <a href="https://github.com/tonyfree/blog/issues/3" target="_blank">路径别名和模块自动加载配置</a>
+4. <a href="https://github.com/tonyfree/blog/issues/4" target="_blank">rap自动切换配置</a>
+5. <a href="https://github.com/tonyfree/blog/issues/5" target="_blank">自动化部署</a>
+6. <a href="https://github.com/tonyfree/blog/issues/6" target="_blank">移动端适配方案</a>
+7. <a href="https://github.com/tonyfree/blog/issues/7" target="_blank">UI库的选择和使用</a>
+8. <a href="https://github.com/tonyfree/blog/issues/8" target="_blank">移动调试和异常监控</a>

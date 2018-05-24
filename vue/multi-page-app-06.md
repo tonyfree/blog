@@ -82,3 +82,14 @@ require('js/flexible.js')
 ok，这才是我们想要的效果，这里我们并没有在index.html的head中添加&lt;meta name="viewport">标签，上图中间红色方框部分都是flexible.js自动计算添加的。
 
 最后一个问题，flexible.js默认字体在所有设备上都是统一大小，如果你想让字体根据设备不同进行适配，直接写rem单位就好，如果使用sublime可用[cssrem](https://github.com/flashlizi/cssrem)这个插件将px转化为rem(只需要处理一定要写成rem的部分，其他正常用px，postcss-px2rem会自动转换)
+
+> 本系列文章：
+
+1. <a href="https://github.com/tonyfree/blog/issues/1" target="_blank">基础结构的搭建</a>
+2. <a href="https://github.com/tonyfree/blog/issues/2" target="_blank">postcss插件和css预编译配置</a>
+3. <a href="https://github.com/tonyfree/blog/issues/3" target="_blank">路径别名和模块自动加载配置</a>
+4. <a href="https://github.com/tonyfree/blog/issues/4" target="_blank">rap自动切换配置</a>
+5. <a href="https://github.com/tonyfree/blog/issues/5" target="_blank">自动化部署</a>
+6. <a href="https://github.com/tonyfree/blog/issues/6" target="_blank">移动端适配方案</a>
+7. <a href="https://github.com/tonyfree/blog/issues/7" target="_blank">UI库的选择和使用</a>
+8. <a href="https://github.com/tonyfree/blog/issues/8" target="_blank">移动调试和异常监控</a>
