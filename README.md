@@ -10,3 +10,7 @@
 6. <a href="https://github.com/tonyfree/blog/issues/6" target="_blank">移动端适配方案</a>
 7. <a href="https://github.com/tonyfree/blog/issues/7" target="_blank">UI库的选择和使用</a>
 8. <a href="https://github.com/tonyfree/blog/issues/8" target="_blank">移动调试和异常监控</a>
+
+
+#### vue项目实践相关
++ [如何在后台jsp模式下进行vue的组件开发](https://github.com/tonyfree/blog/issues/10)
