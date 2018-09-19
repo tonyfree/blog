@@ -1,10 +1,10 @@
 >  请相信总有人用更好的方法解决你正在面临的问题，你需要的只是学习。从来就没有什么新技术，只要大胆地突破已有的边界，能够想到新的组合方式，就一定是创新。
 
-#### todomvc系列
-+ [vue + vue-router + vuex + element-ui](https://github.com/tonyfree/todomvc-vue)
-+ node serve
-+ react系列
-+ angular系列
+#### todomvc
++ [vue](https://github.com/tonyfree/todomvc-vue)
++ [node serve](https://github.com/tonyfree/todomvc-serve)
++ react
++ angular
 + native app
 + pwa
 + desktop app
