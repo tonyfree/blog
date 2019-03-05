@@ -40,3 +40,4 @@ let monacoEditor = monaco.editor.create(...)
 // 全局引入
 let monacoEditor = window.monaco.editor.create(...)
 ```
+4. 把 vue.config.js 中 [monaco-editor-webpack-plugin](https://github.com/Microsoft/monaco-editor-webpack-plugin) 模块移除
